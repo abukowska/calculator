@@ -48,11 +48,12 @@ public class Cli {
 					break;
 				} else {
 					try {
-						calc.calculate(usersEquation);
+						System.out.println(calc.calculate(usersEquation));
+						println("");
 					} catch (IllegalArgumentException iae) {
-						System.out.println("Invalid input. Please try again.");
+						println("Invalid input. Please try again.");
 					} catch (ArithmeticException ae) {
-						System.out.println("Can't divide by zero.");
+						println("Can't divide by zero.");
 					}
 				}
 			} while (true);
